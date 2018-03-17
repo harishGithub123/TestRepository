@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeMap;
 
 public class HashMapDemo {
 
@@ -26,6 +27,25 @@ public class HashMapDemo {
 		System.out.println(hm.remove("dravid"));
 		Collection<Integer> a=hm.values();
 		System.out.println(a);
+		System.out.println(hm);
+		TreeMap<String,Integer> tm=new TreeMap<>();
+		tm.putAll(hm);
+		String d[]={"kohli","kumar1","kohli"};
+		int cnt=1;
+		for(String s:d)
+		{
+			if(hm.containsKey(s))
+			{
+				hm.put(s, ++cnt);
+			}
+			else
+			{
+				hm.put(s, cnt);
+			}
+		}
+		tm.putAll(hm);
+		System.out.println(hm);
+		System.out.println(tm);
 		
 		
 

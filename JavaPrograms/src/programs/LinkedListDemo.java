@@ -42,6 +42,7 @@ public class LinkedListDemo {
 			System.out.println(it.next());
 		}
 		System.out.println(hg.contains("India"));
+		System.out.println(l1);
 	}
 
 }
